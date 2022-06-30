@@ -1,0 +1,3 @@
+# ########## ↓↓ number of frames and add 1# ↓↓↓ second per frame and add 0.4843310657596372
+# ########## ↓↓ ########################### ↓↓↓ #################### ↓↓↓↓↓↓↓ your input file
+for i in {1..28}: do ffmpeg -ss `node -pe 4.4843310657596372*$i` -i ./input.mp4 -frames:v 1 -y videoFrames/`printf %04d $i`.jpeg; done
